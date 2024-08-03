@@ -1,0 +1,174 @@
+:root {
+  --primary-color: #302ae6;
+  --secondary-color: #536390;
+  --font-color: #424242;
+  --bg-color: #fff;
+  --heading-color: #292922;
+}
+
+.dark-mode {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+em {
+  color: white;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  padding: 0 10%;
+}
+
+.logo p {
+  color: white;
+  margin: auto 20px;
+}
+.header {
+  padding: 1% 15%;
+}
+
+.inverted-theme {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+[data-theme='dark'] {
+  --primary-color: #9a97f3;
+  --secondary-color: #818cab;
+  --font-color: #e1e1ff;
+  --bg-color: #161625;
+  --heading-color: #818cab;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+
+h1 {
+  color: var(--secondary-color);
+}
+
+a {
+  color: var(--primary-color);
+}
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.theme-switch-wrapper em {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #000;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.2s;
+
+}
+
+.slider:before {
+  background-color: #00ff73;
+  bottom: 4px;
+  content: '';
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.2s;
+  width: 26px;
+}
+
+
+input:checked + .slider {
+  background-color: #111;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 300px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.input-control {
+  flex-direction: row;
+}
+
+.input-control > button {
+  margin: 0 15px;
+}
+
+.colorPicker {
+  height: 40px;
+  margin: 0 0 0 10px;
+  vertical-align: middle;
+}
+
+.colorPicker:hover {
+  cursor: pointer;
+}
+
+.input {
+  height: 40px;
+  margin: 2px 0;
+  font-size: 1rem;
+  padding: 0 10px;
+  border: solid 1px #6441a5;
+  border-radius: 5px;
+  background-color: #ddd;
+  vertical-align: middle;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+button > svg {
+  vertical-align: middle;
+}
+
+#footer {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#footer > * > svg {
+  vertical-align: middle;
+}
+
+#footer > #right,
+#left {
+  margin-top: -7ppx;
+  font-size: 25px;
+  margin-right: 20px;
+  margin-left: 20px;
+  vertical-align: middle;
+}

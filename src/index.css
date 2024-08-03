@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  font-family: VT323, monospace;
+  /* color: rgb(53, 53, 53); */
+}
+
+body,
+#root {
+  margin: 0;
+  background-color: #eee;
+  min-height: 100vh;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* header {
+  height: 12%;
+  display: flex;
+  align-items: center;
+  background: #6441A5;  
+  background: -webkit-linear-gradient(to right, #2a0845, #6441A5);  
+  background: linear-gradient(to right, #2a0845, #6441A5); 
+  box-shadow: 0px 0px 20px -1px rgba(0,0,0,0.5);
+}
+
+header > img {
+  padding: 10px;
+  height: 80%;
+  margin-left: 10%;
+}
+
+header > p {
+  font-family: VT323, monospace;
+  color: whitesmoke;
+  font-size: 30px;
+  margin-left: 40px;
+} */
+
+.memeRoot{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+  flex-grow: 1;
+}
+
+.canvas {
+  flex-grow: 1;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.meme-form {
+  /* max-width: 20%; */
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 0 4% 0 4%;  
+  flex-direction: column;
+  gap: 20px;
+}
+
+.meme-form > section {
+  display: flex;
+  font-size: 20px;
+  height: 40px;
+}
+
+/* .meme-form .color-picker {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+} */
+
+
+
+
+.meme-form button {
+  border: none;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #6441A5;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+.custom-file-upload p {
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+
+.meme-form > button, 
+.meme-form > input {
+  width: 100%;
+}
+
+.meme-form > input {
+  font-size: 1rem;
+  padding: 0 10px;
+  border: solid 1px #6441A5;
+  border-radius: 5px;
+  background-color: #ddd;
+}
+
+.meme-form > input:focus {
+  box-shadow: 0 0 2px 1px #6441A5;
+  outline: none;
+}
+
+.textSize {
+  width: 70px;
+  margin: 0 0 0 10px !important;
+  text-align: center;
+}
+
+canvas {
+  border: 2px solid #6441A5;
+  box-shadow: 0px 0px 20px -1px rgba(0,0,0,0.5);
+}
+
+input[type="file"] {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  .meme {
+    position: relative;
+    flex-grow: initial;
+    margin: auto 0;
+  }
+  .memeRoot {
+    flex-direction: column-reverse;
+  }
+  .meme-form {
+    max-width: 600px;
+    margin: 1.875rem 0;
+    margin: 20px auto;
+  }
+  canvas {
+    max-width: 100%;
+    margin: 20px 0 0 0;
+  }
+}
